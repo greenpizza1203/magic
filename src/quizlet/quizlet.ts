@@ -1,34 +1,45 @@
 import cheerio from "cheerio";
 import got from "got";
 import {findBestMatch} from "string-similarity";
+import {parse} from "url";
+import {ensureDirSync, readJSON, writeJSON} from "fs-extra"
 
+ensureDirSync("cache")
 const scaper = got.extend({
-    headers: {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Firefox/24.0'}
+    headers: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'}
 });
 
-export function findClosest(question: string, data: []) {
+export function findClosest(question: string, data: any) {
 
     const mashed = data.map(({word, definition}) => `${word} ${definition}`)
-    console.log(mashed)
     const matches = findBestMatch(question, mashed);
-    console.log(data[matches.bestMatchIndex])
+    return data[matches.bestMatchIndex]
 }
 
 export default async function quizlet(question: string, url: string) {
-
-    const response = await scapeHTML(url);
-    const data = processHtml(response)
-    return findBestMatch(question, data)
-    // const closestMatch = findClosest(question, data)
-    // console.log(data)
-
+    const data = await getData(url);
+    return findClosest(question, data)
 }
 
-async function scapeHTML(url: string): Promise<string> {
-    return (await scaper.get(url)).body;
+
+async function getData(url: string): Promise<{ definition: any; word: any }[]> {
+    let parts = parse(url).pathname.split('/');
+    let id = parts.find(part => (+part).toString() == part)
+    if (!id) throw "unable to process quizlet url" + url
+    let filePath = `cache/${id}.json`;
+    try {
+        return await readJSON(filePath)
+    } catch (e) {
+        console.log("scraping quizlet id " + id)
+        const data = await scapeHTML(url)
+        await writeJSON(filePath, data)
+        return data;
+    }
 }
 
-export function processHtml(html: string) {
+async function scapeHTML(url: string) {
+    const html = (await scaper.get(url)).body;
+
     const $ = cheerio.load(html, {normalizeWhitespace: false, xmlMode: false, decodeEntities: true});
     let script = $('script').filter(function () {
             return $(this).html().startsWith('(function(){window.Quizlet["setPageData"]')
