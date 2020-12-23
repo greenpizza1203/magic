@@ -1,0 +1,27 @@
+{
+  "name": "Magic",
+  "version": "1.0",
+  "description": "Does magical stuff",
+  "permissions": [
+    "declarativeContent",
+    "storage",
+    "contextMenus",
+    "*://*.serpapi.com/*"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "icons": {
+    "325": "icon.png"
+  },
+  "page_action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "325": "icon.png"
+    }
+  },
+  "manifest_version": 2
+}
