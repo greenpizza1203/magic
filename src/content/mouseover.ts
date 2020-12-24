@@ -18,19 +18,16 @@ function injectCSS() {
     document.head.appendChild(style);
 }
 
+function injectElement() {
+    const iframe = document.createElement('iframe');
+    iframe.src = chrome.runtime.getURL("mouseover.html");
+    document.body.appendChild(iframe);
+}
+
 function createElement() {
     injectCSS();
+    injectElement();
 
-    element.style.width = '20em'
-    window["bruh"] = element;
-    element.style.height = 'auto'
-    element.style.position = 'absolute'
-    element.style.zIndex = "100000";
-    element.style.background = "#f00";
-    element.style.pointerEvents = 'none'
-    element.id = 'limeLightElement'
-    element.classList.add("fade")
-    document.body.appendChild(element)
 }
 
 function handleMouse(event: MouseEvent) {
