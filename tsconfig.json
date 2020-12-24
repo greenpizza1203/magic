@@ -2,9 +2,8 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "es2020",
-    "esModuleInterop": true,
-    "sourceMap": true,
     "outDir": "build",
+    "esModuleInterop": true,
     "resolveJsonModule": true
   },
   "exclude": [

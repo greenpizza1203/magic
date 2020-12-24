@@ -3,10 +3,12 @@
   "version": "1.0",
   "description": "Does magical stuff",
   "permissions": [
+    "activeTab",
     "declarativeContent",
     "storage",
     "contextMenus",
-    "*://*.serpapi.com/*"
+    "*://*.serpapi.com/*",
+    "*://*.quizlet.com/*"
   ],
   "background": {
     "scripts": [
@@ -17,8 +19,7 @@
   "icons": {
     "325": "icon.png"
   },
-  "page_action": {
-    "default_popup": "index.html",
+  "browser_action": {
     "default_icon": {
       "325": "icon.png"
     }
