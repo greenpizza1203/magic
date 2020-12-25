@@ -2,7 +2,7 @@ import fuzzysort from "fuzzysort";
 
 const db: { [key: string]: set } = {}
 let prepared: card[]
-let options = {keys: ["wordPrepared", "definitionPrepared"], limit: 1};
+let options = {keys: ["wordPrepared", "definitionPrepared"]};
 
 export function prepareSearch(sets: any) {
     Object.assign(db, sets)
@@ -19,7 +19,7 @@ export function prepareSearch(sets: any) {
 }
 
 export function searchFuzzy(question: string) {
-    if(!prepared) return
+    if (!prepared) return
     const results = fuzzysort.go(question, prepared, options);
     return results[0]?.obj
 

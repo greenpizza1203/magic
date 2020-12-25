@@ -1,6 +1,8 @@
 import {searchFuzzy} from "../fuzzy";
 
-const element = document.createElement("div")
+let cardElement: HTMLDivElement;
+let wordElement: HTMLDivElement;
+let definitionElement: HTMLDivElement;
 
 function injectCSS() {
     const style = document.createElement('style');
@@ -18,24 +20,35 @@ function injectCSS() {
     document.head.appendChild(style);
 }
 
-function injectElement() {
-    const iframe = document.createElement('iframe');
-    iframe.src = chrome.runtime.getURL("mouseover.html");
-    document.body.appendChild(iframe);
+const data = {
+    "word": "Psychologists are skeptical about the existence of ESP because\na. ESP researchers frequently accept evidence that they know is fraudulent\nb. there is no way to scientifically test claims of ESP\nc. many apparent demonstrations of ESP have been shown to be stated illusions\nd. ESP experiments show the impact of ESP, but correlational studies do not.\ne. researchers have difficulty finding participants for ESP studies.",
+    "definition": "c. many apparent demonstrations of ESP have been shown to be stated illusions",
+};
+
+async function injectElement() {
+    const placeholder = document.createElement('div');
+    let url = chrome.runtime.getURL("mouseover.html");
+    let response = await fetch(url);
+    placeholder.innerHTML = await response.text();
+    cardElement = placeholder.firstChild as HTMLDivElement;
+    document.body.appendChild(placeholder.firstChild);
+    wordElement = document.getElementById("limeLightWord") as HTMLDivElement
+    definitionElement = document.getElementById("limeLightDefinition") as HTMLDivElement
 }
 
-function createElement() {
+async function createElement() {
     injectCSS();
-    injectElement();
+    await injectElement();
+    wordElement.textContent = data.word
+    definitionElement.textContent = data.definition
 
 }
 
 function handleMouse(event: MouseEvent) {
     let text = window.getSelection().toString() || getTextFromElement(event);
-    element.style.left = event.x + "px"
-    element.style.top = event.y + "px";
-    updateMouseOver(text);
 
+
+    updateMouseOver(text, event);
 }
 
 function getTextFromElement(event: MouseEvent) {
@@ -45,32 +58,38 @@ function getTextFromElement(event: MouseEvent) {
     return element?.innerText;
 }
 
-export function enableMouseover() {
-    createElement();
+export async function enableMouseover() {
+    await createElement();
     document.onmousemove = handleMouse
 }
 
 
 let targetText: string;
 
-export function updateMouseOver(text) {
+export function updateMouseOver(text, event: MouseEvent) {
     if (targetText === text) return;
     targetText = text;
-
-    (text) ? showElement(text) : hideElement()
+    if (text) {
+        const closestCard = searchFuzzy(text)
+        console.log(targetText, !!closestCard);
+        (closestCard) ? showElement(closestCard, event) : hideElement()
+    } else {
+        hideElement()
+    }
+    // (text) ? showElement(text, event) : hideElement()
 
 
 }
 
-function showElement(text) {
-    const closestCard = searchFuzzy(text)
-    if (!closestCard) return
-    // console.log("found ", closestCard)
+function showElement(closestCard, event: MouseEvent) {
+    cardElement.style.left = event.x+40 + "px";
+    cardElement.style.top = event.y+30 + "px";
     const {word, definition} = closestCard;
-    element.innerText = `${word}\n${definition}`
-    element.classList.remove("fade")
+    wordElement.innerText = word
+    definitionElement.innerText = definition
+    cardElement.classList.remove("fade")
 }
 
 function hideElement() {
-    element.classList.add("fade")
+    cardElement.classList.add("fade")
 }

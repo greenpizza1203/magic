@@ -8,6 +8,7 @@ export function getId(url: string): string | undefined {
 }
 
 export async function scrapeSet(id: string): Promise<any> {
+    console.log(`scraping quizlet set #${id}`)
     const response = await fetch("https://quizlet.com/webapi/3.2/terms?%5BisPublished%5D=true&filters%5BsetId%5D=" + id)
     const json = await response.json()
     const cards = json.responses[0].models.term

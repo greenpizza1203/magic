@@ -24,5 +24,8 @@
       "325": "icon.png"
     }
   },
+  "web_accessible_resources": [
+    "mouseover.html"
+  ],
   "manifest_version": 2
 }
