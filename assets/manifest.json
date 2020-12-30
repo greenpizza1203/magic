@@ -11,8 +11,9 @@
     "*://*.quizlet.com/*"
   ],
   "background": {
-    "service_worker": "background.js"
-
+    "scripts": [
+      "background.js"
+    ]
   },
   "icons": {
     "325": "icon.png"
