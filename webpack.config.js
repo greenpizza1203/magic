@@ -4,7 +4,7 @@ const path = require("path")
 
 module.exports = {
     devtool: false,
-    entry: {content: "./src/content/content.ts", background: "./src/background.ts"},
+    entry: {content: "./src/content/content.ts", background: "./src/background/background.ts", worker: "./src/worker.ts"},
     output: {
         path: path.join(__dirname, "dist")
     },

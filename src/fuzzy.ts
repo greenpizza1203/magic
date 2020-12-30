@@ -1,4 +1,8 @@
 import Fuse from "fuse.js";
+import {card, set} from "./util";
+import FuseResult = Fuse.FuseResult;
+
+const limit = 3;
 
 const db: { [key: string]: set } = {}
 let fuse: Fuse<card>
@@ -14,7 +18,7 @@ const options = {
     // threshold: 0.6,
     // distance: 100,
     // useExtendedSearch: false,
-    // ignoreLocation: false,
+    ignoreLocation: true,
     // ignoreFieldNorm: false,
     keys: [
         "word",
@@ -23,31 +27,19 @@ const options = {
 };
 
 
-// Change the pattern
-const pattern = ""
-
 export function prepareSearch(sets: any) {
+    console.log("preparing fuse: ", sets)
     Object.assign(db, sets)
     let targets = Object.values(db).flatMap(set => set)
     fuse = new Fuse(targets, options);
-
-    // prepared = targets.map(t => ({
-    //     ...t,
-    //     wordPrepared: fuzzysort.prepare(t.word),
-    //     definitionPrepared: fuzzysort.prepare(t.definition)
-    // }))
-    //
-    // console.log(prepared)
-
-
 }
 
-export function searchFuzzy(question: string) {
-    // if (!prepared) return
+export function searchFuzzy(question: string): FuseResult<card>[] {
     // const results = fuzzysort.go(question, prepared, options);
     // return results[0]?.obj
-    let search = fuse.search(question);
-    console.log(search)
-    return search
-
+    let search = fuse?.search(question);
+    if (!search) return;
+    return search.slice(0, limit);
 }
+
+

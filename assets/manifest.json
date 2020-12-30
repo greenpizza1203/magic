@@ -11,10 +11,8 @@
     "*://*.quizlet.com/*"
   ],
   "background": {
-    "scripts": [
-      "background.js"
-    ],
-    "persistent": false
+    "service_worker": "background.js"
+
   },
   "icons": {
     "325": "icon.png"
@@ -25,7 +23,8 @@
     }
   },
   "web_accessible_resources": [
-    "mouseover.html"
+    "mouseover.html",
+    "worker.js"
   ],
   "manifest_version": 2
 }
