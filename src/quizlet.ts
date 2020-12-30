@@ -19,7 +19,7 @@ export async function scrapeSet(id: string): Promise<any> {
 
 }
 
-export async function getSets(ids: string[], scrapeNew = false) {
+export async function getSets(ids: string[], scrapeNew = true) {
     let sets = await cache.get(ids);
     if (!scrapeNew) return sets;
     const firstNew = ids.find(id => !sets.hasOwnProperty(id))
