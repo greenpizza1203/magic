@@ -1,0 +1,374 @@
+/* ------------------------------
+ * -- Main Global Styling -------
+ * ------------------------------ */
+
+.\_pendo-guide\_ {
+    /* -- Overarching settings for all guides -- */
+}
+
+.\_pendo-guide-container\_ {
+    /* -- Guide border, shadow, background, etc. -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-guide-content\_ {
+    /* -- Content area -- use for font attributes, padding, etc. */
+}
+
+/* ------------------------------
+ * -- Lightbox Specific Styling -
+ * ------------------------------ */
+
+.\_pendo-guide-lb\_ {
+    /* -- Overarching settings for Lightbox -- */
+}
+
+.\_pendo-guide-lb\_ .\_pendo-guide-container\_ {
+    /* -- Guide border, shadow, background, etc. -- */
+}
+
+.\_pendo-guide-lb\_ .\_pendo-guide-container\_ .\_pendo-guide-content\_ {
+    /* -- Content area -- use for font attributes, padding, etc. */
+}
+
+.\_pendo-backdrop\_ {
+    /* The backdrop displayed behind lightboxes */
+}
+
+/* ------------------------------
+ * -- Tooltip Specific Styling --
+ * ------------------------------ */
+
+.\_pendo-guide-tt\_ {
+    /* Overarching settings for tooltip */
+}
+
+.\_pendo-guide-tt\_ .\_pendo-guide-container\_ {
+    /* -- Guide border, shadow, background, etc. -- */
+}
+
+.\_pendo-guide-tt\_ .\_pendo-guide-container\_ .\_pendo-guide-content\_ {
+    /* -- Content area -- use for font attributes, padding, etc. */
+}
+
+/* -- Pointer on the edge of the tooltip -- */
+
+.\_pendo-guide-arrow\_ {}
+
+.\_pendo-guide-arrow-top\_ {}
+
+.\_pendo-guide-arrow-left\_ {}
+
+.\_pendo-guide-arrow-right\_ {}
+
+.\_pendo-guide-arrow-bottom\_ {}
+
+.\_pendo-guide-arrow-border-top\_ {}
+
+.\_pendo-guide-arrow-border-left\_ {}
+
+.\_pendo-guide-arrow-border-right\_ {}
+
+.\_pendo-guide-arrow-border-bottom\_ {}
+
+/* ------------------------------
+ * -- Mobile Lightbox Styling ---
+ * ------------------------------ */
+
+.\_pendo-guide-mobile-lb\_ {
+    /* Overarching settings for Mobile Lightbox */
+}
+
+.\_pendo-guide-mobile-lb\_ .\_pendo-guide-container\_ {
+    /* -- Guide border, shadow, background, etc. -- */
+}
+
+.\_pendo-guide-mobile-lb\_ .\_pendo-guide-container\_ .\_pendo-guide-content\_ {
+    /* -- Content area -- use for font attributes, padding, etc. */
+}
+
+/* ------------------------------
+ * -- Mobile Tooltip Styling ---
+ * ------------------------------ */
+
+.\_pendo-guide-mobile-tt\_ {
+    /* Overarching settings for mobile tooltip */
+}
+
+.\_pendo-guide-mobile-tt\_ .\_pendo-guide-container\_ {
+    /* -- Guide border, shadow, background, etc. -- */
+}
+
+.\_pendo-guide-mobile-tt\_ .\_pendo-guide-container\_ .\_pendo-guide-content\_ {
+    /* -- Content area -- use for font attributes, padding, etc. */
+}
+
+/* ------------------------------
+ * -- Launcher Styling ----------
+ * ------------------------------ */
+
+.\_pendo-launcher\_ {
+    /* Overarching settings for Launcher */
+}
+
+.\_pendo-launcher\_ .\_pendo-guide-container\_ {
+    /* -- Launcher border, shadow, background, etc. -- */
+    /* -- (uses tooltip styles by default) -- */
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-content\_ {
+    /* -- Content area -- use for font attributes, padding, etc. */
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-header\_ {
+    /* -- Launcher header area -- */
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-header\_ img {
+    /* -- Launcher header area image styles -- */
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-header\_ .\_pendo-launcher-title\_ {
+    /* -- Launcher header area text styles -- */
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-header\_ .\_pendo-launcher-search-box\_ {
+    /* -- Launcher search area (if enabled) -- */
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-header\_ .\_pendo-launcher-search-box\_ input[type='text'] {
+    /* -- Launcher search area text box -- */
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-guide-listing\_ {
+    /* -- Launcher guide listing area -- */
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-guide-listing\_ .\_pendo-launcher-item\_ {
+    /* -- An individual item in the launcher guide listing -- */
+}
+
+.\_pendo-launcher\_ .\_pendo-launcher-footer\_ {
+    /* -- Launcher footer area -- */
+}
+
+.\_pendo-launcher-badge\_ {
+    /* -- Styles for the launcher badge -- */
+}
+
+/* -- Styles for launcher badge orientations -- */
+
+.\_pendo-launcher-badge-bottom-right\_ {
+    bottom: 0px;
+}
+
+.\_pendo-launcher-badge-bottom-left\_ {}
+
+.\_pendo-launcher-badge-top-right\_ {}
+
+.\_pendo-launcher-badge-top-left\_ {}
+
+/* -- Styles for launcher orientations -- */
+
+.\_pendo-launcher-bottom-right\_ {}
+
+.\_pendo-launcher-bottom-left\_ {}
+
+.\_pendo-launcher-top-right\_ {}
+
+.\_pendo-launcher-top-left\_ {}
+
+/* ------------------------------
+ * -- Poll Styling --------------
+ * ------------------------------ */
+
+.\_pendo-guide-container\_ .\_pendo-poll\_ {
+    /* -- Poll container -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-question\_ {
+    /* -- Question and answer container (everything but the submit button) -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-question-prompt\_ {
+    /* -- Question text -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-question\_ label {
+    /* -- Number Scale Poll positioning and styles for radio button text and inputs -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-question\_ select {
+    /* -- Dropdown styling -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-question\_ .\_pendo-poll-npsrating-choices\_ {
+    /* -- NPS Poll ratings container -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-question\_ .\_pendo-poll-npsrating-choices\_ label {
+    /* -- NPS Poll individual rating - the number scale items -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-question\_ .\_pendo-poll-npsrating-choices\_ label span {
+    /* -- NPS Poll individual rating - accompanying text for number scale items -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-npsreason\_ {
+    /* -- NPS Poll optional user-provided explanation container -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-npsreason\_ .\_pendo-poll-question-prompt\_ {
+    /* -- NPS Poll optional user-provided explanation text -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-question\_ button {
+    /* -- Yes/No Poll buttons styles -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-submit\_ {
+    /* -- Submit button styles -- */
+}
+
+.\_pendo-guide-container\_ .\_pendo-poll-message\_ {
+    /* -- "Success message" styles -- */
+}
+
+/* ------------------------------
+ * -- Additional Global Styling -
+ * ------------------------------ */
+
+.\_pendo-close-guide\_ {
+    /* -- The dismiss guide button displayed in the corner of every guide -- */
+}
+
+.\_pendo-badge\_ {
+    /* -- Styles for badges -- */
+}
+
+/* ------------------------------
+ * -- Your Custom Classes/IDs ---
+ * ------------------------------ */
+
+.\_pendo-launcher-bottom-right\_ .\_pendo-launcher-content\_ {
+    border-top-width: 10px;
+}
+
+.\_pendo-launcher\_ .\_pendo-guide-container\_ {
+    border-radius: 1px !important;
+}
+
+.\_pendo-launcher-bottom-right\_ {
+    bottom: 50px;
+}
+
+/* --------------------------
+ * Custom Launcher Icon
+ */
+
+.\_pendo-launcher-badge\_,
+.\_pendo-launcher-badge\_.\_pendo-launcher-badge-bottom-right\_.onboarding {
+    z-index: 400001;
+    right: 15px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: none;
+    transition: box-shadow 80ms ease-in-out; //box-shadow: 0 1px 6px rgba(0, 0, 0, .06), 0 2px 20px rgba(0, 0, 0, .2);
+    transform-origin: center;
+    cursor: pointer;
+    opacity: 0.8;
+    -webkit-animation: pendo-launcher-badge-appear .25s ease;
+    animation: pendo-launcher-badge-appear .25s ease;
+    background-clip: content-box;
+}
+
+.\_pendo-launcher-badge\_::before {
+    content: '';
+    display: block;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAYAAABxLuKEAAAABGdBTUEAALGOfPtRkwAADfdJREFUeAHlnAl0VNUZx783k3mTkCFAgISwkxBlU0DCegBB1ErVFqQqthVcjoILpx5xaY9tPT2naovVFou2xVar9RzAlWJT1IosiiCCJCCgBGTXACGAZCGzvNfv/4ZvcufNTDJJ3gBpv3Puu/fdd5fv/vJ999538xKNzp5oSldqWslOmDSVJ2payXY22VQFm9K72rakEatptCf39rYFgBqraSkveXLvSJzmSCvRjchA7RBcXEzyEOMeInnhu/AVg5UBG2fSkif3KCll7Gnct0icBIMBQmSgMngAiBfkuVoP9WWwiAUC4kRBgKEuROqH75p5dQKMOjAZrIBws17xgjxHjDoSMAwZqIARICF+Fi/Ic8QqFDWNdpskLQGTCIiAQNuRoPe6xGeOnj6SsnIu1rxt8smT0VtzuzuZmjuTNC3T0to0qzUzVGMGgxUUqN1r1lXvocpD22j94k8Dh7ZVc5lggiDABJIKRU1b3SRzkcElU1Yto/6E5acPIALCw2mPZ8S0PG3I1VPI1+kq8qRfjDy1kSakA+Sv+ZxOlr9vbFq6LFj6zmGuC0h+DoEzQaABkgDiZMQCkU5amgNGoCAGFBWIzvce/fonxmrd+88yvZnjyDRbYpWxA9G0oFZzcp2x57MXAm8/vp4LAE4dBwBC2g4IFiOBk8lJU8BIWQEjLmNZB3fn1W+adynl9Z9LHu+w5LpvYam6mhLzqw1/DCx7fC23JIAEEkCJi6lgknItGWxjGko5xOI6sARA8XrGzuyhFU15lLyZ1zbWUEqeVx9/1/jw5d8GS4sPcvunOQCOAIIFiWsJFIn5UXzBT70xsUNBHQsIx+meGfOv0vpPXEJp+kWNNZSy53pGX61g5DRXl8I9xo5Vh7gf6Cx6x+u2oWdW+WTBoCGZTyJQ9NkvzdE693mSdUiP1/tZzdM0XevY4ypX39FBo6T4c+7bPvhGrUTVtzEwaNwORU/vPSTLNXPBfF5t7oyjgNr+2U5rmi97lHvw5F6uPRvXGTUn4UIQgSJxOLeBa0NgBAriiPvoY27ual45ZzHpmZc10O65feRtc4E26PIx2onDa42KvZhzAMQeGtQxERg7FEy03vQ+Q7PM7zCUNO8lDbZ6Pjx0e3K1/GHDXLs+foctB6uTCgYaNmg9jYHBc0DB/iTdNfPZ+aS3mcTp1iGAUzimW+jTN9awwgIG7iXphHDigRFrwWQbgaLPfnkO+TrOah1EFC3ZrVyFo/xGyb+32IAIHKVwfTIeGABR5xXdc8uCyVqnXk+dya+v3UpSWtuOI1yde+80vlizn1VW9zRiPRhJlPXYwYi1IN+yFs+EO3ppF4x7/bxYkqF+80TTsnuO004eWW4c2V3FTQCIvFPFtRxYh10AJ+JG/BL4K377bWsv1OrueSF3TbjtAdYbey4vB8yb+OGLh3CyXlSLibEW/Ue/n0jZ3X5RX7yVp/SMAlf7vBKjbC12x3hVSGg1dosRawEwD+UWPtzKUcSorxWOvpszYS2wGuziMdYYq1HBiMUgL03/8VPj+AChiNP/W+LNHOy5eu4oHhTgAIzqTsLAysTAJQNQrIlXyym8K2qaRimHpah7FuV3bENd2urkTXNR2dEa+vJoNe06VkOBUOp6d+WPnMFDwVkO4OC4AmNWN4ERMJxviQVGn3B7rqlnXMqHTJLvWJzr0+lnl+XT1ItyGAisOVaCIYO+qqyllbsracFH+2lnRU1soRbkmJkdRqb1n5AT3LGqlpuBxYg7AY4lyIAAiOVCHOvu795/ayrehWYWdaWltwylsX06kM8LfeKLy6VRx0ydirq3o7tG96De2Rm0Ylelk1bkonadK43S5SWsgf3ED0qZgAE3gggcN2V0mBzOcu56C0NZ+IOBlJWeGEi83jRNo5uHdaVXfujscY/WoftE7k/mGLEYMIBoomVkjkm/cLzP8OhDoveB4dLNvebzT/zZqf2jqn97OkjPf3KQXttSTvuPn6Zqf4j65WTSwC4+Gpjro2kX5VqWIpXe3IrzbwfF6xuQllPgCx7ZDT8VMMLBRAZuQAppj+uahybyO9ENnHZMHptcSEU92kXaO14ToAl/+pSWlJZT+Sk/1QYMChqmld76TZXlNgvXH+D8EA3nesdq/DTrje3ERZwUN3l9JcbOD/dwozgfln0NerFO8AEGEgbkyx4cvnXuelnfjlGNPb1mL+04gl8TJRY/r0rzVu2llzZ+bVlRSlapTj1gxh9wkGkkwkJ1JTzU+IS/ILG6TX+SxhNpz/bRJ58lX59KuqHDVX46zBNvKkTLyOrF7apQwgzOZKp9usjtLBi4yKk6WGm99Oe55LwQPVMFAygRkRuYkBU0t6tz5KlDic2Hoi3k55cX0Pj8Dg613vxmtDRPNteOjF1JW2YU1bKpuRz/cb5fdiyqDyzZ/7mziFbMKqJbh3eLcbWowim8MV3uNtx8xH3UrmSOQV6YHH7BjnnZQcFke2lBB7rygk5RrWKjhwApq6imFWWVHI7RBzynVPHynXLRXAADUa3GylDBWBmpuGCZvXnRVvrztAE0dVBu3C4KO2USwmze6WKZfnv7UfrbhoO0avfxuOVTnSlzDPqBnZj8ftTwOtpMjU7UBmn6K1tozIJP6L2dFWQ0sCnJ8LjphsFd6N07iujt24ZSrw7Rq1ozVYitZhryEhYee5iBVU4FY2VoppESMKLVpoPf0rUvbKZuv15NMxZvpUWbv6GKarzgxhe438rZw9maxOrjl2tOrmaEAEY99400I64UIWaGjKOU5u4eKZGiRCXvfpeUlFuBX4docF5bmtQ3m6awq43oWb9LRvfd2qXTc9f1pysWbnJUGzMYwAYpMnYlHbMqGRSq2+1o70k0htMNbPqeWrOPxj23wXK33Xwmo8r4/GwaxO9Rjoq/eh+3B4uREGleXAnUwiYVOPtgItqcScDdpry42Z5NTm8MzdpvVTD1DLhngEEGJPygqrI0fHturzicsu+YMSk7KhUHdnB72BeIxURYqBZjgXGtX7KeV/XEs2EzNBuQm0mPTMqnTD35gWGybWs7zLK7VzNUUasEzE+WfMYZACNwwMCCEwPm9Jdrqijgx8mWY/LQhD70yysK6IuHxtI9Y3qQx439VGJpxzvjl6YPiiqAybopL59RlePd1FVt57MY/PJNjhvCU8kZMFiVQAia4kGYXu3x5dQ2dwTft1iwB7n+4vCmLofPe5/+Xj96kEFhHsFudycfgOPwm1/CKS/LS6N7taebhuTFnPQ989E+6zCrxQqdacA8fnAlJ9VzGLEalIh8USkmhDhE21e9TqOmP+LEF5d9+PSukjd3gCICANcMwLtqcu+ry7YdoSf5bMYx4S8/zQ1vFnN7KhiVgXVqh/5gMRJcob2b69JGXF9E7rR8PGyJ7OVjy7+sO2C9+wztmkVNmUD9QYMWrN1P97y1wzrha4keal2t5sS6QPGTr3IePipCwJwKlxI4ETCcZ4GR2OXuM6KC2uXciIyWSoC3/x/vPUEL+Yy3qi5krTYh3ry09bp5LynTXH0v28qr6JXPvqY7XttGr2457PSRJpk7Vj9m7Fr3FfdYy0G+7oQrAYwlsBIRpKEl5h3YfYZ+/7+KU/3byB58uofDcmh0FKd1HDDRpkzqqkv9f5g6g9vHxIsAOGIxMgHH/MIN+skkHKCju+ZR1wEwuZTJgROnCeFsiVm27jnuCyBUS4kAET1UOxb/EjBB/z/uW011NcukcKuPqyvfCxTPW6dAibtUY5wqGBm3WA0q+c2S4kd5dYo+m5SSrSk2zSpj1Qu/Y5VhnrCWGPdRh2MHAyiQiNUEVj1/wDxSdg9PzchrncK6m2UfPRL8/L2DPAABo1oLxiVjt8aYzB5d4w/79rkHXRGgdN94q1Yru5iHy54JLH74dVYbr+yyPGOGl5UoCgqGlwwYlKPQxrc2u4um9OFvfAdYGa3lcqqiOPD87fxZvwUFKxDACBR4AaAkDUY2e1ynXjxHylab/S4dTy53Xn3ueZzy12w1F829jz+AxhwpexbMLer2P+4AkrGYCM3gifKQm9wrqFu/0eRKO7/hMBRj+fw5wf2lR21QZG4RS4mMTyWUDBi1PIUObKnxfLNjqdl3ZE92q+hPGKJKnsMbdh9z0QM/Ce4vESgyrwCK6j5xoUBzdeebaCTiVljBABLflGBn7OU/y7mX2uf9lD3Uvrrx43MgWH3Kdz0T+Pvdf+Xe4Tqq+zQ6r6gaJ2MxdngREwxtXLrJlV+0TfN1msTfAsf/bkztLZVp3qeYu9bPDSx6UFYfFYq4j1hLo5okAwaNJIJjGKXv7HFp7re03II8/tbzwkZ7TEUB/OnfBwvvDa5ciINiWZLt7qNCSehCop59wJIfL5ayiBEAVVwL7uXVb/zNeOo28IFz8MeiH3P/2M1KgNuI69j3Ko1C4boxloC8xkTAIJZ5B2/k8lau6zc+NlbrOvDOlP558b5NLwb++QTee7D8qgFuY3cdcX9+lJxgcM0RgYO6gGMHBAvyeIZf11Ubes33/1/+IB0wIAJVIKmA4GJiRVZ8Dv6FgbiMxJbSyV5kcMmWj1dO2rADEiuSuUiNBSJiqSftiNkjxoQpAXNFvCDPZXIVEBJztaaLKNP0mrE1ZIB4ImkVgD2NMgJG6iCWAQkYiVUAahrPJaj1kW62OAlGlJA2BQ7yVQiSDygQuQ/fha/qQFVLEEiIIWo5yQs/aeEVSqVK1LYlrUJQ8+LpIANVYzUtdSRP7h2JRTlHGmukEbUvNd1INeuxOng1nUzdZpX5L1yEJiOLKmNBAAAAAElFTkSuQmCC');
+    background-size: 56px 56px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+    -webkit-transform: rotate(0deg) scale(1);
+    -ms-transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1);
+    transition: opacity .08s linear, -webkit-transform .16s linear;
+    transition: transform .16s linear, opacity .08s linear;
+    transition: transform .16s linear, opacity .08s linear, -webkit-transform .16s linear;
+}
+
+.\_pendo-launcher-badge\_::after {
+    content: '';
+    display: block;
+    background-image: url('data:image/png;base64,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');
+    background-size: 56px 56px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transition: opacity .08s linear, -webkit-transform .16s linear;
+    transition: transform .16s linear, opacity .08s linear;
+    transition: transform .16s linear, opacity .08s linear, -webkit-transform .16s linear;
+}
+
+.\_pendo-launcher-badge\_.\_pendo-launcher-active\_::before {
+    content: '';
+    display: block;
+    background-image: url('data:image/png;base64,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');
+    background-size: 56px 56px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    -webkit-transform: rotate(30deg) scale(0);
+    -ms-transform: rotate(30deg) scale(0);
+    transform: rotate(30deg) scale(0);
+}
+
+.\_pendo-launcher-badge\_.\_pendo-launcher-active\_::after {
+    content: '';
+    display: block;
+    background-image: url('data:image/png;base64,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');
+    background-size: 56px 56px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+}
+
+.\_pendo-launcher-badge\_:before,
+.\_pendo-launcher-badge\_:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    transition: opacity .08s linear, -webkit-transform .16s linear;
+    transition: transform .16s linear, opacity .08s linear;
+    transition: transform .16s linear, opacity .08s linear, -webkit-transform .16s linear;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+.\_pendo-launcher-badge\_ .\_pendo-launcher-whatsnew-count\_ {
+    background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='23px' height='23px' viewBox='0 0 23 23' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3Eicon/navigation/badge%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Pendo-Widget-Design' transform='translate(-1689.000000, -359.000000)'%3E%3Cg id='Group-10-Copy' transform='translate(1417.000000, 136.000000)'%3E%3Cg id='icon/navigation/badge' transform='translate(274.000000, 225.000000)'%3E%3Cg id='badge-copy-5'%3E%3Ccircle id='new-messages-copy-5' stroke='%23014B78' stroke-width='2' fill='%23FAC901' cx='9.5' cy='9.5' r='10.5'%3E%3C/circle%3E%3Ctext id='%23' font-family='OpenSans-Bold, Open Sans' font-size='10' font-weight='bold'%3E%3C/text%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: transparent;
+    color: #024f7d;
+    right: 34px;
+    line-height: 25px;
+    height: 24px;
+    width: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    background-size: 20px;
+}

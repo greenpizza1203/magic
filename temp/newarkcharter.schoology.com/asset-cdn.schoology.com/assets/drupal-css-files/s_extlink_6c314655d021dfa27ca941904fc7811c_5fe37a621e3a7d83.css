@@ -1,0 +1,12 @@
+span.ext {
+    background: url('/sites/all/modules/schoology_core/s_extlink/s_extlink.png?5fe37a621e3a7d83') right center no-repeat;
+    padding-right: 12px;
+    zoom: 1;
+}
+
+span.mailto {
+    background: url('/sites/all/modules/schoology_core/s_extlink/mailto.png?5fe37a621e3a7d83') right center no-repeat;
+    padding-right: 12px;
+    zoom: 1;
+    margin-left: 4px;
+}
