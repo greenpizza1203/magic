@@ -1,8 +1,10 @@
 import {cards, createElement, parent} from "./mouseover"
-import {cache, fuzzy, serverSearch} from "./websocket";
+import {cache, send} from "./websocket";
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    serverSearch(request)
+    (async function (search: string) {
+        await send({search})
+    })(request)
     sendResponse(true);
 });
 
@@ -30,13 +32,14 @@ export function updateSelection(mouseOverText?: string) {
     text = text?.trim();
     if (targetText === text) return;
     targetText = text;
-    console.trace("target", targetText)
+    // console.trace("target", targetText)
 
     if (targetText) {
-        parent.classList.remove("outerFade")
-        console.log("requesting:", targetText)
-        fuzzy(targetText)
-        // chrome.runtime.sendMessage(targetText, handleFuzzyResult)
+        parent.classList.remove("outerFade");
+        // console.log("requesting:", targetText);
+        // (async function (target: string) {
+        send(targetText)
+        // })(targetText)
     } else {
         parent.classList.add("outerFade")
     }
@@ -44,17 +47,22 @@ export function updateSelection(mouseOverText?: string) {
 
 let oldCardIds = []
 
-export function handleFuzzyResult(cardIds?: string[]) {
-    if (!cardIds) cardIds = oldCardIds;
+export function handleFuzzyResult(cardIds: string[] = oldCardIds) {
+    oldCardIds = cardIds;
     let strings = cardIds.filter(id => cache[id]);
+    // console.trace(strings)
+
     if (!strings.length) {
         parent.classList.add("fade")
-
     } else {
+        cards.forEach((cardElement, index) => {
+            cardElement.style.opacity = !strings[index] ? "0" : "1";
+        })
         strings.forEach((id, index) => {
+
             const item = cache[id];
-            console.log(id)
-            console.log(item)
+            // console.log(id)
+            // console.log(item)
             const cardElement = cards[index];
             const wordElement = cardElement.firstElementChild;
             const definitionElement = cardElement.lastElementChild;
@@ -66,7 +74,5 @@ export function handleFuzzyResult(cardIds?: string[]) {
 
     }
 
-    parent.classList.remove("fade")
-    // parent.classList.add("fade")
 }
 

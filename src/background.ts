@@ -1,6 +1,6 @@
 import Tab = chrome.tabs.Tab;
 import OnClickData = chrome.contextMenus.OnClickData;
-import {scrapeSet} from "./quizlet";
+import {scrapeSet} from "./content/quizlet";
 //todo:permissions
 chrome.runtime.onInstalled.addListener(function () {
     chrome.contextMenus.create({
@@ -14,7 +14,6 @@ chrome.contextMenus.onClicked.addListener(handleClick)
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         (async () => {
             if (request.scrape) sendResponse(await scrapeSet(request.scrape));
-
         })()
         return true
     }
@@ -33,13 +32,5 @@ export async function handleClick(info: OnClickData, tab: Tab) {
         }
     });
 
-    // chrome.tabs.sendMessage(tab.id, info.selectionText)
-    // chrome.scripting.executeScript(tab.id, info.selectionText, async (e) => {
-    //     if (!e) {
-    //         chrome.tabs.insertCSS({file: "mouseover.css"});
-    //         await chrome.tabs.executeScript({file: 'content.js'})
-    //     }
-    // })
 }
 
-// chrome.runtime.lastE

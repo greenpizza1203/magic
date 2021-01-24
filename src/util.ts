@@ -21,19 +21,3 @@ export async function fetchString(url: string): Promise<string> {
     return (await fetch(url)).text();
 }
 
-export function createWorker(code: string) {
-
-    const blob = new Blob([code], {type: 'application/javascript'});
-    // } catch (e) { // Backwards-compatibility
-    //     // @ts-ignore
-    //     window.BlobBuilder = window.BlobBuilder || window.WebKitBlobBuilder || window.MozBlobBuilder;
-    //     // @ts-ignore
-    //     blob = new BlobBuilder();
-    //     blob.append(code);
-    //     blob = blob.getBlob();
-    // }
-
-    // @ts-ignore
-    return new Worker(URL.createObjectURL(blob));
-
-}

@@ -1,6 +1,6 @@
 import {getString} from "../util";
 
-type CardElement = { firstElementChild: HTMLDivElement, lastElementChild: HTMLDivElement }
+type CardElement = HTMLDivElement&{ firstElementChild: HTMLDivElement, lastElementChild: HTMLDivElement }
 export let parent: HTMLDivElement;
 export let cards: CardElement[] = []
 
