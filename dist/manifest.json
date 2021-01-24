@@ -7,25 +7,31 @@
     "declarativeContent",
     "storage",
     "contextMenus",
-    "*://*.serpapi.com/*",
+    "scripting"
+  ],
+  "host_permissions": [
     "*://*.quizlet.com/*"
   ],
   "background": {
-    "scripts": [
-      "background.js"
-    ]
+    "service_worker": "background.js"
   },
   "icons": {
     "325": "icon.png"
   },
-  "browser_action": {
+  "action": {
     "default_icon": {
       "325": "icon.png"
     }
   },
   "web_accessible_resources": [
-    "mouseover.html",
-    "worker.js"
+    {
+      "resources": [
+        "mouseover.html",
+        "worker.js"
+      ],
+      "matches": [],
+      "extension_ids": []
+    }
   ],
-  "manifest_version": 2
+  "manifest_version": 3
 }

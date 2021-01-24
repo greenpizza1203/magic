@@ -7,10 +7,10 @@ export let cards: CardElement[] = []
 export async function createElement() {
     parent = document.body.appendChild(document.createElement('div'))
     parent.classList.add("limeLightParent", "fade", "outerFade")
-
+    const mouseOverCode = await getString("mouseover.html")
     for (let i = 0; i < 3; i++) {
         const placeholder = document.createElement('div');
-        placeholder.innerHTML = await getString("mouseover.html")
+        placeholder.innerHTML = mouseOverCode
         // css document
         let divItem = placeholder.firstElementChild;
         const cardElement = divItem as HTMLDivElement;

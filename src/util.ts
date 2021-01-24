@@ -1,4 +1,4 @@
-export type card = { word: string, definition: string }
+export type card = { word: string, definition: string, id:string }
 export type set = card[]
 
 export function lerpColor(a: string, b: string, amount: number): string {
